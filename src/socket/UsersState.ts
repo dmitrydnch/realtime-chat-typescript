@@ -3,7 +3,7 @@ import { User } from "./types";
 export class UsersState {
   public users: Array<User> = [];
 
-  public setUsers(usersArray: Array<User>) {
+  private setUsers(usersArray: Array<User>) {
     this.users = usersArray;
   }
 
@@ -15,12 +15,12 @@ export class UsersState {
     this.setUsers(this.users.filter(user => user.id !== id));
   }
 
-  public activateUser(user: User): User {
-    this.setUsers([
-      ...this.users.filter(user => user.id !== user.id),
-      user
-    ]);
-    return user;
+  public activateUser(newUser: User): User {
+
+    const newArr = this.users.filter(user => newUser.id !== user.id);
+
+    this.setUsers([newUser, ...newArr]);
+    return newUser;
   }
 
   public getUsersInRoom(room: string): Array<User> {

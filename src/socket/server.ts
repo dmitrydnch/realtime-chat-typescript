@@ -11,7 +11,7 @@ export const bootstrapWsServer = (httpServerApp: http.Server): void => {
   const io = new Server(httpServerApp, socketOptions);
 
   const usersState = new UsersState();
-  const chatAppName = "Chat App";
+  const chatAppName = "BOT";
 
   io.on(EventsEnum.Connection, socket => {
     console.log(`User ${socket.id} connected`);

@@ -16,14 +16,14 @@
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"
           integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz"
           crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
 <div class="chat">
   <h1 class="title">Realtime Chat</h1>
   <form class="form-chat-join">
     <input class="text-input" type="text" id="name" maxlength="10" placeholder="What is your name?" size="6" required />
-    <input class="text-input" type="text" id="room" placeholder="Chat Room" size="6" required>
+    <input class="text-input" type="text" id="room" placeholder="Chat Room" value="general" size="6" required>
     <button class="button" id="join-chat" type="submit">Join Chat</button>
   </form>
   <ul class="chat-messages">
@@ -32,8 +32,8 @@
   <p class="chat-rooms"></p>
   <p class="activity"></p>
   <form class="form-chat-message">
-    <input class="text-input" type="text" id="message" required placeholder="Write your message here..." />
-    <button class="button" type="submit">Send</button>
+    <input class="text-input" disabled type="text" id="message" required placeholder="Write your message here..." />
+    <button class="button" disabled type="submit" id="send-message">Send</button>
   </form>
 
 </div>
