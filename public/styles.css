@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.chat {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    flex-flow: column;
+    margin: 30px auto;
+    border-radius: 20px;
+    background-color: #fafafa;
+    padding: 10px 20px;
+}
+
+.chat .title {
+    color: #335ce7;
+}
+
+.form-chat-join {
+    display: flex;
+    flex-flow: row;
+    gap: 5px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.text-input {
+    background-color: #fafafa;
+    border: 1px solid #d3d1d1;
+    color: #335ce7;
+    border-radius: 20px;
+}
+
+.button {
+    background-color: #335ce7;
+    border: 1px solid #335ce7;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fff;
+    border: 1px solid #335ce7;
+    color: #335ce7;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.form-chat-join input, button {
+    padding: 10px 10px;
+    width: 33%;
+}
+
+/* TO EDIT */
+.chat-messages {
+    background-color: #c5c5c5;
+    list-style-type: none;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 1rem auto;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+.form-chat-message input {
+    padding: 10px 10px;
+    width: 75%;
+}
+.form-chat-message button {
+    width: 20%;
+}
+
+/* TO EDIT */
+.chat-users,
+.chat-rooms,
+.activity {
+    width: 100%;
+    min-height: 1rem;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: .75rem .25rem;
+}
+
+
+.activity {
+    font-style: italic;
+}
