@@ -1,1 +1,3 @@
-console.log('Hello World! This is future real time chat app');
+import { bootstrap } from "./app";
+
+bootstrap();
